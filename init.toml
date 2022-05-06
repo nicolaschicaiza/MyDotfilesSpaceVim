@@ -1,0 +1,310 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2021 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    default_indent = 2
+    autocomplete_method = 'coc'
+    escape_key_binding = 'kj'
+
+    # Configurations Google suggestions
+    enble_googlesuggest = 1
+
+    # Bootstrap Functions
+    bootstrap_before = 'myspacevim#before'
+    bootstrap_after = 'myspacevim#after'
+     
+
+# Enable SpaceVim layers 
+[[layers]]
+  name = 'ui'
+  enable_sidebar = true
+  enable_scrollbar = true
+  enable_cursorword = true
+  conceallevel = 2
+  concealcursor = 'inc'
+  cursorword_delay = 50
+
+[[layers]]
+    name = "colorscheme"
+
+[[layers]]
+    name = "cscope"
+
+[[layers]]
+    name = "denite"
+
+[[layers]]
+    name = "foldsearch"
+
+[[layers]]
+    name = "core#banner"
+
+[[layers]]
+    name = "core#statusline"
+
+[[layers]]
+    name = "core#tabline"
+
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "complete"
+    auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
+
+[[layers]]
+    name = "lang#latex"
+    format_on_save = true
+    
+[[layers]]
+    name = "lang#extra"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#go"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#graphql"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#vim"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#java"
+    format_on_save = true
+    java_formatter_jar = "~/.SpaceVim.d/lib/google-java-format-1.15.0-all-deps.jar"
+
+[[layers]]
+    name = "lang#javascript"
+    format_on_save = false
+
+[[layers]]
+    name = "lang#e"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#ipynb"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#lua"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#markdown"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#matlab"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#php"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#dockerfile"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#python"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#wolfram"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#c"
+    format_on_save = true
+
+[[layers]]
+    name = "lang#sh"
+
+[[layers]]
+    name = "lang#toml"
+    format_on_save = true
+
+[[layers]]
+    name = "land#html"
+    format_on_save = true
+
+# [[layers]]
+    # name = 'lsp'
+    # enabled_clients = ['vimls', 'clangd']
+    # filetypes = [
+      # "javascriptreact",
+      # "python",
+      # "javascript"
+    # ]
+    # [layers.override_cmd]
+        # javascriptreact = ['typescript-language-server', '--stdio']
+        # python = ['pyls']
+    
+
+[[layers]]
+    name = 'format'
+
+[[layers]]
+    name = 'gtags'
+    gtagslabel = 'pygments'
+
+[[layers]]
+    name = 'edit'
+
+[[layers]]
+    name ='VersionControl'
+
+[[layers]]
+    name = "ctrlp"
+
+[[layers]]
+    name = "checkers"
+    lint_on_the_fly = true
+
+[[layers]]
+    name = 'git'
+    git_plugin = 'fugitive'
+
+[[layers]]
+    name = 'floobits'
+
+[[layers]]
+    name = 'debug'
+    
+[[layers]]
+    name = 'github'
+    
+[[layers]]
+    name = 'test'
+
+[[layers]]
+    name = 'fzf'
+
+[[layers]]
+    name = 'tool#dash'
+
+[[layers]]
+    name = 'core'
+
+[[layers]]
+    name = 'ctrlspace'
+
+[[layers]]
+    name = 'sudo'
+
+[[layers]]
+    name = 'ssh'
+
+[[layers]]
+    name = 'tools'
+
+[[layers]]
+    name = 'leaderf'
+
+[[layers]]
+    name = 'treesitter'
+
+[[layers]]
+    name = 'unite'
+
+[[layers]]
+    name = "incsearch"
+
+[[layers]]
+    name = "tool#mpv"
+
+# Plugins Installed
+[[custom_plugins]]
+    name = "nvim-lua/plenary.nvim"
+
+[[custom_plugins]]
+    name = "nvim-telescope/telescope.nvim"
+
+[[custom_plugins]]
+    name = "glepnir/lspsaga.nvim"
+
+[[custom_plugins]]
+    name = "kyazdani42/nvim-web-devicons"
+
+[[custom_plugins]]
+    name = "voldikss/vim-translator"
+
+[[custom_plugins]]
+    name = "ryanoasis/vim-devicons"
+
+[[custom_plugins]]
+    name = "xuyuanp/nerdtree-git-plugin"
+
+[[custom_plugins]]
+    name = "voldikss/vim-floaterm"
+
+[[custom_plugins]]
+    name = "vigoux/languagetool.nvim"
+
+[[custom_plugins]]
+    name = "kyoz/npm.vim"
+
+[[custom_plugins]]
+    name = "voldikss/vim-browser-search"
+    
+[[custom_plugins]]
+    name = "segeljakt/vim-silicon"
+
+[[custom_plugins]]
+    name = "rhysd/vim-grammarous"
+
+[[custom_plugins]]
+    name = "leafgarland/typescript-vim"
+
+[[custom_plugins]]
+    name = "ianks/vim-tsx"
+
+[[custom_plugins]]
+    name = "ingomeyer441/coc_current_word"
+
+[[custom_plugins]]
+    name = "terryma/vim-multiple-cursors"
+
+[[custom_plugins]]
+    name = "jiangmiao/auto-pairs"
+
+[[custom_plugins]]
+    name = "ashisha/image.vim"
+
+[[custom_plugins]]
+    name = "rhysd/open-pdf.vim"
+
+[[custom_plugins]]
+    name = "tpope/vim-surround"
+
+[[custom_plugins]]
+    name = "sheerun/vim-polyglot"
+
